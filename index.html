@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta de Namoro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .proposal-container {
+            display: none;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .proposal-container.show {
+            display: block;
+        }
+
+        .proposal-img {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .proposal-text {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Manu, aceita namorar comigo?</h1>
+    <button class="btn" id="btnSim">Sim</button>
+    <button class="btn" id="btnNao">Não</button>
+    
+    <div class="proposal-container" id="proposalContainer">
+        <img src="https://via.placeholder.com/400" alt="Manu e Yago" class="proposal-img">
+        <p class="proposal-text">Manu e Yago <br> ❤️</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById("btnSim").addEventListener("click", function() {
+        document.getElementById("proposalContainer").classList.add("show");
+    });
+
+    document.getElementById("btnNao").addEventListener("click", function() {
+        alert("Não existe essa opção.");
+    });
+</script>
+
+</body>
+</html>
